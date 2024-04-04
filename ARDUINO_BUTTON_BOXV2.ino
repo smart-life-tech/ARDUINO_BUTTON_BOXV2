@@ -124,8 +124,9 @@ void CheckAllButtons(void)
         case PRESSED:
           if (i == 16)
           {
-            Joystick.setButton(buttbx.key[i].kchar, 1);
+            digitalWrite(14,HIGH);
             delay(250);
+            digitalWrite(14,LOW);
             Joystick.setButton(buttbx.key[i].kchar, 0);
           }
           break;
