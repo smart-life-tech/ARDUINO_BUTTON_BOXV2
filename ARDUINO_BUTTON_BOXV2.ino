@@ -122,16 +122,16 @@ void CheckAllButtons(void)
         switch (buttbx.key[i].kstate)
         {
         case PRESSED:
-          if (i == 16)
+          if (i == 15)
           {
-            digitalWrite(14, HIGH);
+            Joystick.setButton(buttbx.key[i].kchar, 1);
             delay(250);
-            digitalWrite(14, LOW);
             Joystick.setButton(buttbx.key[i].kchar, 0);
+            delay(250);
           }
           break;
         case HOLD:
-          if (i != 16)
+          if (i != 15)
             Joystick.setButton(buttbx.key[i].kchar, 1);
           break;
         case RELEASED:
